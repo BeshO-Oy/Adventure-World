@@ -25,7 +25,7 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="dashboard">Home</a></li>
-                     <li><a href="aboutpage">About</a></li>
+                     <li><a href="goto_about">About</a></li>
 
                      @if(Route::has('login'))
                      @auth

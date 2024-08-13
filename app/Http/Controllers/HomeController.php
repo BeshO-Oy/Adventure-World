@@ -48,6 +48,9 @@ class HomeController extends Controller
     }
 
 
+    public function goto_about(){
+        return view('home.about2');
+    }
 
 
 }

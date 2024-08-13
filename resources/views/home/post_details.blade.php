@@ -65,9 +65,6 @@
          <p class="head_deg">{{$post->title}}</p>
          <br>
 
-         <p class="status_deg">Status: {{$post->post_status}}</p>
-         <br><br><br>
-
          <p class="desc_deg">{{$post->description}}</p>
         <br><br><br>
 

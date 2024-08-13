@@ -94,4 +94,12 @@ class UserController extends Controller
         return view('user.aboutpage');
     }
 
+    public function goto_about(){
+        return view('home.goto_about');
+    }
+
+    public function subscribe(){
+        Alert::success('Success', 'You have subscribed successfully!');
+        return redirect()->back();
+    }
 }

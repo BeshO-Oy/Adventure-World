@@ -62,3 +62,6 @@ Route::post('/update_post_user/{id}',[ UserController::class,'update_post_user']
 
 Route::get('/aboutpage',[ UserController::class,'aboutpage'])->middleware('auth','user');
 
+Route::get('/goto_about',[ UserController::class,'goto_about'])->middleware('auth','user');
+
+Route::get('/subscribe',[ UserController::class,'subscribe'])->middleware('auth','user');

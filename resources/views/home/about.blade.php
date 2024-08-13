@@ -4,8 +4,8 @@
                <div class="col-md-6">
                   <div class="about_taital_main">
                      <h1 class="about_taital">About Us</h1>
-                     <p class="about_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All </p>
-                     <div class="readmore_bt"><a href="#">Read More</a></div>
+                     <p class="about_text">Welcome to Adventure World, your go-to destination for sharing and exploring stories, ideas, and experiences from around the globe! Launched in 2024 in Egypt, Adventure World is more than just a blog—it's a community where creativity knows no bounds. Whether you're an avid traveler, a budding writer, or someone with a unique perspective to share, this is the place to let your voice be heard.</p>
+                     <div class="readmore_bt"><a href="goto_about">Read More</a></div>
                   </div>
                </div>
                <div class="col-md-6 padding_right_0">

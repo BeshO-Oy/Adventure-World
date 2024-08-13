@@ -5,21 +5,18 @@
                      <div class="container">
                         <h1 class="banner_taital">Adventure</h1>
                         <p class="banner_text">Hello to one of the coolest blogs ever "Adventure World"!</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="container">
                         <h1 class="banner_taital">Adventure</h1>
                         <p class="banner_text">Enjoy browsing and creating posts here!</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="container">
                         <h1 class="banner_taital">Adventure</h1>
                         <p class="banner_text">Sharing thouhgts is our mission!</p>
-                        <div class="read_bt"><a href="#">Get A Quote</a></div>
                      </div>
                   </div>
                </div>
