@@ -30,8 +30,6 @@ class HomeController extends Controller
         }
     }
 
-
-
     public function dashboard(){
         $post = Post::where('post_status','=','active')->get();
 
@@ -51,6 +49,5 @@ class HomeController extends Controller
     public function goto_about(){
         return view('home.about2');
     }
-
 
 }

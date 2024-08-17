@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class AdminController extends Controller
 {
@@ -84,13 +85,44 @@ class AdminController extends Controller
         else{
             $post->post_status = 'active';
             $post->save();
-
-
             return redirect()->back()->with('message','Post Approved Successfully');
         }
-
-
     }
+
+    public function admin_teams(){
+        $user = User::all()->where('usertype','user');
+
+        return view('admin.admin_teams' , compact('user'));
+    }
+
+    public function delete_user($id){
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->back()->with('message','User Deleted Successfully');
+    }
+
+    public function edit_user($id){
+        $user = User::find($id);
+
+        return view('admin.edit_user', compact('user'));
+    }
+
+    public function update_user(Request $request, $id){
+        $data = User::find($id);
+
+        $data->name = $request->name;
+        $data->email = $request->email;
+
+        $image = $request->image;
+        if($image){
+        $imagename = time().'.'.$image->getClientOriginalExtension();
+        $request->image->move('userimage',$imagename);
+        $data->image = $imagename;
+        }
+        $data->save();
+        return redirect()->back()->with('message','User Updated Successfully');
+    }
+
 
 
 

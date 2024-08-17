@@ -46,6 +46,14 @@ Route::post('/update_post/{id}',[ AdminController::class,'update_post'])->middle
 
 Route::get('/approve_post/{id}',[ AdminController::class,'approve_post'])->middleware('auth','admin');
 
+Route::get('/admin_teams',[ AdminController::class,'admin_teams'])->middleware('auth','admin');
+
+Route::get('/delete_user/{id}',[ AdminController::class,'delete_user'])->middleware('auth','admin');
+
+Route::get('/edit_user/{id}',[ AdminController::class,'edit_user'])->middleware('auth','admin');
+
+Route::post('/update_user/{id}',[ AdminController::class,'update_user'])->middleware('auth','admin');
+
 Route::get('/post_details/{id}',[ HomeController::class,'post_details'])->middleware('auth');
 
 Route::get('/add_post',[ UserController::class,'add_post'])->middleware('auth','user');
@@ -65,3 +73,4 @@ Route::get('/aboutpage',[ UserController::class,'aboutpage'])->middleware('auth'
 Route::get('/goto_about',[ UserController::class,'goto_about'])->middleware('auth','user');
 
 Route::get('/subscribe',[ UserController::class,'subscribe'])->middleware('auth','user');
+
