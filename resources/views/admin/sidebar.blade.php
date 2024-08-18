@@ -13,6 +13,8 @@
                 <li><a href="{{url('post_page')}}"> <i class="icon-grid"></i>Add Post </a></li>
                 <li><a href="{{url('show_post')}}"> <i class="fa fa-bar-chart"></i>Show Posts </a></li>
                 <li><a href="{{url('admin_teams')}}"> <i class="icon-windows"></i>Admin Teams</a></li>
+                <li><a href="{{url('add_teams')}}"> <i class="icon-windows"></i>Add Teams</a></li>
+
                 <!-- <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
                   <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
                     <li><a href="#">Page</a></li>

@@ -8,6 +8,9 @@ use App\Http\Controllers\UserController;
 use Models\User;
 use Illuminate\Support\Facades\Auth;
 use Middleware\Admin;
+use App\Models\Post;
+use App\Models\Teams;
+
 
 
 Route::get('/',[ HomeController::class,'dashboard']);
@@ -53,6 +56,16 @@ Route::get('/delete_user/{id}',[ AdminController::class,'delete_user'])->middlew
 Route::get('/edit_user/{id}',[ AdminController::class,'edit_user'])->middleware('auth','admin');
 
 Route::post('/update_user/{id}',[ AdminController::class,'update_user'])->middleware('auth','admin');
+
+Route::get('/add_teams',[ AdminController::class,'add_teams'])->middleware('auth','admin');
+
+Route::post('/create_team',[ AdminController::class,'create_team'])->middleware('auth','admin');
+
+Route::get('/delete_teams/{id}',[ AdminController::class,'delete_teams'])->middleware('auth','admin');
+
+Route::get('/edit_teams/{id}',[ AdminController::class,'edit_teams'])->middleware('auth','admin');
+
+Route::post('/update_teams/{id}',[ AdminController::class,'update_teams'])->middleware('auth','admin');
 
 Route::get('/post_details/{id}',[ HomeController::class,'post_details'])->middleware('auth');
 

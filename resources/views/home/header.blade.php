@@ -1,7 +1,10 @@
+
+<base href="/public">
+
 <div class="header_main">
             <div class="mobile_menu">
                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                  <div class="logo_mobile"><a href="index.html"><img src="images/logo.png"></a></div>
+                  <div class="logo_mobile"><a href="dashboard"><img src="images/logo.png"></a></div>
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
                   </button>

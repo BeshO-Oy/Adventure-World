@@ -88,7 +88,7 @@
       <div class="page-content">
 
 <div>
-    <h1 class="title_show_post">All Users</h1>
+    <h1 class="title_show_post">All Teams</h1>
 
     @if(session()->has('message'))
     <div class="alert alert-success">
@@ -102,20 +102,20 @@
         <tr class="th_deg">
             <th>ID</th>
             <th>Name</th>
-            <th>email</th>
             <th>Image</th>
+            <th>Position</th>
             <th>Delete</th>
             <th>Edit</th>
         </tr>
 
-        @foreach($user as $user)
+        @foreach($teams as $teams)
         <tr>
-            <td>{{$user->id}}</td>
-            <td>{{$user->name}}</td>
-            <td>{{$user->email}}</td>
-            <td><img src="userimage/{{$user->image}}" alt="Image" class="img_deg"></td>
-            <td><a href="{{url('delete_user' , $user->id)}}" class="delete_btn" onclick="confirmation(event)">Delete</a></td>
-            <td><a href="{{url('edit_user' , $user->id)}}" class="edit_btn">Edit</a></td>
+            <td>{{$teams->id}}</td>
+            <td>{{$teams->name}}</td>
+            <td><img src="teamimage/{{$teams->image}}" alt="Image" class="img_deg"></td>
+            <td>{{$teams->position}}</td>
+            <td><a href="{{url('delete_teams' , $teams->id)}}" class="delete_btn" onclick="confirmation(event)">Delete</a></td>
+            <td><a href="{{url('edit_teams' , $teams->id)}}" class="edit_btn">Edit</a></td>
         </tr>
         @endforeach
 

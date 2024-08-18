@@ -33,6 +33,7 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'position' => ['required', 'string', 'max:255'],
         ]);
 
 
@@ -42,6 +43,7 @@ class RegisteredUserController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'position' => $request->position,
         ]);
 
         $image = $request->image;
@@ -50,7 +52,6 @@ class RegisteredUserController extends Controller
         $request->image->move('userimage',$imagename);
         $user->image = $imagename;
         }
-
 
         $user->save();
 
