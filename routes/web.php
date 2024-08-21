@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Auth;
 use Middleware\Admin;
 use App\Models\Post;
 use App\Models\Teams;
+use App\Models\Job_Category;
+use App\Models\Job_Position;
 
 
 
@@ -66,6 +68,61 @@ Route::get('/delete_teams/{id}',[ AdminController::class,'delete_teams'])->middl
 Route::get('/edit_teams/{id}',[ AdminController::class,'edit_teams'])->middleware('auth','admin');
 
 Route::post('/update_teams/{id}',[ AdminController::class,'update_teams'])->middleware('auth','admin');
+
+Route::get('/job_category',[ AdminController::class,'job_category'])->middleware('auth','admin');
+
+Route::get('/job_position',[ AdminController::class,'job_position'])->middleware('auth','admin');
+
+Route::get('/delete_category/{id}',[ AdminController::class,'delete_category'])->middleware('auth','admin');
+
+Route::get('/edit_category/{id}',[ AdminController::class,'edit_category'])->middleware('auth','admin');
+
+Route::get('/add_category',[ AdminController::class,'add_category'])->middleware('auth','admin');
+
+Route::post('/create_category',[ AdminController::class,'create_category'])->middleware('auth','admin');
+
+Route::get('/add_position',[ AdminController::class,'add_position'])->middleware('auth','admin');
+
+Route::get('/delete_position/{id}',[ AdminController::class,'delete_position'])->middleware('auth','admin');
+
+Route::get('/edit_position/{id}',[ AdminController::class,'edit_position'])->middleware('auth','admin');
+
+Route::post('/update_position/{id}',[ AdminController::class,'update_position'])->middleware('auth','admin');
+
+Route::post('/create_position',[ AdminController::class,'create_position'])->middleware('auth','admin');
+
+Route::get('/service_category',[ AdminController::class,'service_category'])->middleware('auth','admin');
+
+Route::get('/add_service_category',[ AdminController::class,'add_service_category'])->middleware('auth','admin');
+
+Route::post('/create_service_category',[ AdminController::class,'create_service_category'])->middleware('auth','admin');
+
+Route::get('/delete_service_category/{id}',[ AdminController::class,'delete_service_category'])->middleware('auth','admin');
+
+Route::get('/edit_service_category/{id}',[ AdminController::class,'edit_service_category'])->middleware('auth','admin');
+
+Route::post('/update_service_category/{id}',[ AdminController::class,'update_service_category'])->middleware('auth','admin');
+
+Route::get('/service',[ AdminController::class,'service'])->middleware('auth','admin');
+
+Route::get('/add_service',[ AdminController::class,'add_service'])->middleware('auth','admin');
+
+Route::post('/create_service',[ AdminController::class,'create_service'])->middleware('auth','admin');
+
+Route::get('/delete_service/{id}',[ AdminController::class,'delete_service'])->middleware('auth','admin');
+
+Route::get('/edit_service/{id}',[ AdminController::class,'edit_service'])->middleware('auth','admin');
+
+Route::post('/update_service/{id}',[ AdminController::class,'update_service'])->middleware('auth','admin');
+
+
+
+
+
+
+
+
+//-----------------------------------User Routes----------------------------------------------
 
 Route::get('/post_details/{id}',[ HomeController::class,'post_details'])->middleware('auth');
 

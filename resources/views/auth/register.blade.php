@@ -40,15 +40,7 @@
         </div>
 
          <!-- Position -->
-         <div class="mt-4">
-            <x-input-label for="position" :value="__('Position')" />
-
-            <x-text-input id="position" class="block mt-1 w-full"
-                            type="text"
-                            name="position" required autocomplete="position"/>
-
-            <x-input-error :messages="$errors->get('position')" class="mt-2" />
-        </div><br>
+        <br>
 
 
         <!-- Image -->

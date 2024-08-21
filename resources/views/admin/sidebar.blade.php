@@ -8,19 +8,21 @@
           </div>
         </div>
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
-        <ul class="list-unstyled">
+        <ul class="list-unstyled scroll">
                 <li><a href="dashboard"> <i class="icon-home"></i>Home </a></li>
                 <li><a href="{{url('post_page')}}"> <i class="icon-grid"></i>Add Post </a></li>
                 <li><a href="{{url('show_post')}}"> <i class="fa fa-bar-chart"></i>Show Posts </a></li>
                 <li><a href="{{url('admin_teams')}}"> <i class="icon-windows"></i>Admin Teams</a></li>
                 <li><a href="{{url('add_teams')}}"> <i class="icon-windows"></i>Add Teams</a></li>
+                <li><a href="{{url('job_category')}}"> <i class="icon-windows"></i>Job Categories</a></li>
+                <li><a href="{{url('job_position')}}"> <i class="icon-windows"></i>Job Positions</a></li>
+                <li><a href="{{url('service_category')}}"> <i class="icon-windows"></i>Service Categories</a></li>
+                <li><a href="{{url('service')}}"> <i class="icon-windows"></i>Services</a></li>
 
-                <!-- <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
-                  <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                  </ul>
-                </li> -->
+
+
+
+
+
 
       </nav>
