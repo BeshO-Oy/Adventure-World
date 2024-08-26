@@ -130,7 +130,7 @@
         <div class="page-content">
 
             <div>
-                <h1 class="title_show_post">Services</h1>
+                <h1 class="title_show_post">Menu</h1>
 
                 @if(session()->has('message'))
                 <div class="alert alert-success">
@@ -143,34 +143,30 @@
                     <tr class="th_deg">
                         <th>ID</th>
                         <th>Title</th>
-                        <th>Description</th>
-                        <th>Image</th>
-                        <th>Category</th>
+                        <th>Link</th>
                         <th>Delete</th>
                         <th>Edit</th>
 
 
                     </tr>
 
-                    @foreach($service as $service)
+                    @foreach($menu as $menu)
                     <tr>
-                    <td>{{$service->id}}</td>
-                    <td>{{$service->title}}</td>
-                    <td>{{$service->description}}</td>
-                    <td><img src="serviceimage/{{$service->image}}" alt="Image" class="img_deg"></td>
-                    <td>{{$service->service_category->title}}</td>
-                    <td><a href="{{url('delete_service' , $service->id)}}" class="delete_btn" onclick="confirmation(event)">Delete</a></td>
-                    <td><a href="{{url('edit_service' , $service->id)}}" class="edit_btn" >Edit</a></td>
-                    </tr>
+                    <td>{{$menu->id}}</td>
+                    <td>{{$menu->title}}</td>
+                    <td>{{$menu->link}}</td>
+                    <td><a href="{{url('delete_menu' , $menu->id)}}" class="delete_btn" onclick="confirmation(event)">Delete</a></td>
+                    <td><a href="{{url('edit_menu' , $menu->id)}}" class="edit_btn" >Edit</a></td>
+                </tr>
                     @endforeach
 
                 </table>
                 <br><br>
 
-                <a class="add_category_btn" href="{{url('add_service')}}">Add Service</a>
+                <a class="add_category_btn" href="{{url('add_menu')}}">Add Menu</a>
             </div>
         </div>
-        @include('admin.footer')
+
 
         <script type="text/javascript">
             function confirmation(e){

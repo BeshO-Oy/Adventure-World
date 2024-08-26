@@ -12,6 +12,9 @@ use App\Models\Post;
 use App\Models\Teams;
 use App\Models\Job_Category;
 use App\Models\Job_Position;
+use App\Models\Service_Category;
+use App\Models\Service;
+use App\Models\Menu;
 
 
 
@@ -115,9 +118,17 @@ Route::get('/edit_service/{id}',[ AdminController::class,'edit_service'])->middl
 
 Route::post('/update_service/{id}',[ AdminController::class,'update_service'])->middleware('auth','admin');
 
+Route::get('/menu',[ AdminController::class,'menu'])->middleware('auth','admin');
 
+Route::get('/add_menu',[ AdminController::class,'add_menu'])->middleware('auth','admin');
 
+Route::post('/create_menu',[ AdminController::class,'create_menu'])->middleware('auth','admin');
 
+Route::get('/delete_menu/{id}',[ AdminController::class,'delete_menu'])->middleware('auth','admin');
+
+Route::get('/edit_menu/{id}',[ AdminController::class,'edit_menu'])->middleware('auth','admin');
+
+Route::post('/update_menu/{id}',[ AdminController::class,'update_menu'])->middleware('auth','admin');
 
 
 

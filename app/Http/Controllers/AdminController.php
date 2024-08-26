@@ -10,6 +10,7 @@ use App\Models\Job_Category;
 use App\Models\Job_Position;
 use App\Models\Service_Category;
 use App\Models\Service;
+use App\Models\Menu;
 use Illuminate\Support\Facades\DB;
 
 
@@ -354,13 +355,42 @@ class AdminController extends Controller
         return redirect()->back()->with('message','Service Updated Successfully');
     }
 
+    public function menu(){
+        $menu = Menu::all();
+        return view('admin.menu' , compact('menu'));
+    }
 
+    public function add_menu(){
+        return view('admin.add_menu');
+    }
 
+    public function create_menu(Request $request){
+        $menu = new Menu;
+        $menu->title = $request->title;
+        $menu->link = $request->link;
+        $menu->save();
+        return redirect()->back()->with('message','Menu Added Successfully');
+    }
 
+    public function delete_menu($id){
+        $menu = Menu::find($id);
+        $menu->delete();
+        return redirect()->back()->with('message','Menu Deleted Successfully');
+    }
 
+    public function edit_menu($id){
+        $menu = Menu::find($id);
+        return view('admin.edit_menu', compact('menu'));
+    }
 
+    public function update_menu(Request $request, $id){
+        $data = Menu::find($id);
 
-
+        $data->title = $request->title;
+        $data->link = $request->link;
+        $data->save();
+        return redirect()->back()->with('message','Menu Updated Successfully');
+    }
 
 
 }
